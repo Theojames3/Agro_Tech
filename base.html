@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Goods & Services - Agro Tech</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <style>
+    body {
+      background-color: #0d1117;
+      color: #f0f6fc;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(to right, #013220, #14532d);
+      color: #f0f6fc;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav {
+      background-color: #161b22;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: #00ff84;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background-color: #1f6f4a;
+      border-radius: 8px;
+      padding: 6px 12px;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #00ff84;
+      padding-bottom: 5px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(0, 255, 132, 0.08);
+    }
+
+    .card img {
+      max-width: 100%;
+      height: 120px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      color: #00ff84;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #b1bac4;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      background-color: #00ff84;
+      color: #0d1117;
+      padding: 10px 15px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #14fa94;
+    }
+
+    footer {
+      background-color: #161b22;
+      color: #8b949e;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      border-top: 1px solid #30363d;
+    }
+  </style>
+</head>
+<body>
+
+  <header>🌾 Smart Goods & Services</header>
+<nav>
+  <a href="/home">Home</a>
+  <a href="/goods_services">Goods & Services</a>
+  <a href="/customer_care">Customer Care</a>
+  <a href="/feedback">Feedback</a>
+  <a href="/login">Logout</a>
+</nav>
+
+  <div class="container">
+    <h2 class="section-title">🧠 AI-Recommended Tools & Products</h2>
+
+    <div class="grid">
+      <div class="card">
+        <img src="/static/images/fertilizer.png" alt="Fertilizer">
+        <h3>Organic Fertilizer</h3>
+        <p>Recommended for maize and cassava. Boosts soil health and yields.</p>
+        <a href="#" class="btn">Order Now</a>
+      </div>
+
+      <div class="card">
+        <img src="/static/images/sprayer.png" alt="Sprayer">
+        <h3>Smart Sprayer</h3>
+        <p>Bluetooth-enabled crop sprayer with precision dosage control.</p>
+        <a href="#" class="btn">Order Now</a>
+      </div>
+
+      <div class="card">
+        <img src="/static/images/seeds.png" alt="Seeds">
+        <h3>Disease-Resistant Seeds</h3>
+        <p>AI-picked for your climate and soil type. High germination rate.</p>
+        <a href="#" class="btn">Order Now</a>
+      </div>
+
+      <div class="card">
+        <img src="/static/images/hoe.png" alt="Hoe">
+        <h3>Smart Hoe Tool</h3>
+        <p>Ergonomic and durable hand hoe with adjustable handle.</p>
+        <a href="#" class="btn">Order Now</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Agro Tech | Smart Farming, Smarter Tools 🌱
+  </footer>
+</body>
+</html>
