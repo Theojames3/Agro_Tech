@@ -1,7 +1,0 @@
-services:
-  - type: web
-    name: Agro_Tech_App
-    env: python
-    plan: free
-    buildCommand: ""
-    startCommand: gunicorn app:app
