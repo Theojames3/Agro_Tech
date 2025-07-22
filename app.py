@@ -1,8 +1,8 @@
-from flask import Flask, request, redirect, render_template
+from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
 
-# Simple fixed credentials
+# Fixed credentials
 USERNAME = "admin"
 PASSWORD = "123"
 
@@ -32,22 +32,21 @@ def goods_services():
 
 @app.route('/customer_care', methods=['GET', 'POST'])
 def customer_care():
-    return render_template('customer_care.html')
-
-@app.route('/chat', methods=['POST'])
-def chat():
-    question = request.form['question']
-    reply = f"🤖 AI Reply: I understand your question '{question}', and we’ll get back with helpful advice soon!"
-    return render_template('customer_care.html', ai_reply=reply)
+    ai_reply = None
+    if request.method == 'POST':
+        question = request.form.get('question')
+        ai_reply = f"🤖 AI Reply: I understand your question '{question}', and we’ll get back with helpful advice soon!"
+    return render_template('customer_care.html', ai_reply=ai_reply)
 
 @app.route('/feedback', methods=['GET', 'POST'])
 def feedback():
+    message = None
     if request.method == 'POST':
-        rating = request.form['rating']
-        comment = request.form['comment']
+        rating = request.form.get('rating')
+        comment = request.form.get('comment')
         print(f"User rated: {rating}, Comment: {comment}")
-        return render_template('feedback.html', message="✅ Thank you for your feedback!")
-    return render_template('feedback.html')
+        message = "✅ Thank you for your feedback!"
+    return render_template('feedback.html', message=message)
 
 if __name__ == '__main__':
     app.run(debug=True)
