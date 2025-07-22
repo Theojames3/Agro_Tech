@@ -1,10 +1,5 @@
-from flask import Flask
+from flask import Flask, request, redirect, render_template
 
-app = Flask(__name__)
-
-@app.route('/')
-def home():
-    return "Hello from Agro_Tech!"
 app = Flask(__name__)
 
 # Simple fixed credentials
